@@ -49,9 +49,14 @@ body {
 .avatar-pixel {
     width: 80px;
     height: 80px;
-    background-color: var(--accent-color);
+    display: block; /* 确保图片独占一行 */
     margin: 0 auto 10px;
-    box-shadow: 4px 4px 0px #000; /* 像素阴影 */
+    box-shadow: 4px 4px 0px #000; /* 保留这个阴影，很有立体感 */
+    object-fit: cover; /* 确保图片填满方框不变形 */
+    border: 2px solid #000; /* 给图片加个黑边框，更像像素风 */
+    /* 下面这行让非像素图看起来稍微有点锯齿感，
+       如果你上传的就是像素画，这行非常重要 */
+    image-rendering: pixelated; 
 }
 
 h1 {

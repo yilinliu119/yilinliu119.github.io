@@ -1,65 +1,71 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hello, GitHub Pages</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0f172a;
-      --fg: #e2e8f0;
-      --accent: #22d3ee;
-      --card: #111827;
-    }
-    @media (prefers-color-scheme: light) {
-      :root { --bg:#f8fafc; --fg:#0f172a; --accent:#0ea5e9; --card:#ffffff; }
-    }
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: grid;
-      place-items: center;
-      background: radial-gradient(1200px 800px at 50% -20%, rgba(34,211,238,.15), transparent),
-                  var(--bg);
-      color: var(--fg);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    .card {
-      width: min(720px, 92vw);
-      background: var(--card);
-      border: 1px solid color-mix(in oklab, var(--fg) 15%, transparent);
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.15);
-    }
-    h1 { margin: 0 0 .3rem; font-size: clamp(1.6rem, 4.5vw, 2.4rem); }
-    p  { margin: .3rem 0 1rem; }
-    a  { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    code { padding: .15rem .35rem; border-radius: 6px; background: rgba(127,127,127,.15); }
-    footer { opacity: .7; font-size: .9rem; margin-top: 1rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yilin's Pixel Garden</title>
+    <!-- 引入像素字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- 引入 Markdown 解析库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="card" role="main">
-    <h1>It works! 🎉</h1>
-    <p>This is a minimal landing page for your GitHub Pages site.</p>
 
-    <h2>Next steps</h2>
-    <ol>
-      <li>Edit this file: <code>index.html</code></li>
-      <li>(Optional) Add a theme by creating <code>_config.yml</code> with <code>theme: jekyll-theme-cayman</code></li>
-      <li>Commit and push your changes</li>
-      <li>Check your site URL after a minute</li>
-    </ol>
+    <div class="container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar-pixel"></div>
+                <h1>Yilin's Blog</h1>
+                <p class="pixel-text">Level 1 Explorer</p>
+            </div>
+            
+            <nav class="menu">
+                <h3>📂 目录 (Archives)</h3>
+                <ul id="file-list">
+                    <!-- JavaScript 会自动填充这里 -->
+                    <li>加载中...</li>
+                </ul>
+            </nav>
 
-    <p>
-      Need Markdown instead? Create <code>index.md</code> and write in Markdown.
-    </p>
+            <div class="contribution-panel">
+                <h3>📅 探索日志 (Log)</h3>
+                <div class="heatmap" id="heatmap">
+                    <!-- JavaScript 会自动生成热力图 -->
+                </div>
+                <div class="heatmap-legend">
+                    <span>Less</span>
+                    <span class="color-box level-0"></span>
+                    <span class="color-box level-1"></span>
+                    <span class="color-box level-2"></span>
+                    <span class="color-box level-3"></span>
+                    <span class="color-box level-4"></span>
+                    <span>More</span>
+                </div>
+            </div>
+        </aside>
 
-    <footer>
-      Hosted by <a href="https://pages.github.com/" target="_blank" rel="noreferrer">GitHub Pages</a>.
-    </footer>
-  </main>
+        <!-- 主内容区 -->
+        <main class="content-area">
+            <div class="pixel-window">
+                <div class="window-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="title" id="doc-title">Welcome.md</span>
+                </div>
+                <div class="window-body markdown-body" id="content-display">
+                    <h1>欢迎来到我的像素花园 🌿</h1>
+                    <p>点击左侧的目录查看我的笔记。</p>
+                    <p>这里将展示你的 Markdown 内容。</p>
+                    <br>
+                    <p>> System ready...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
